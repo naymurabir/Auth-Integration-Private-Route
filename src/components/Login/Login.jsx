@@ -33,10 +33,24 @@ const Login = () => {
     // Google and Github login
     const handleGoogleLogin = () => {
         googleLogin()
+            .then(result => {
+                const user = result.user
+                console.log(user);
+            })
+            .catch(error => {
+                console.log("Error", error.message);
+            })
     }
 
     const handleGithubLogin = () => {
         githubLogin()
+            .then(result => {
+                const user = result.user
+                console.log(user);
+            })
+            .catch(error => {
+                console.log("Error", error.message);
+            })
     }
 
 
